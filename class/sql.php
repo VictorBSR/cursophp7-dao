@@ -13,7 +13,7 @@ class Sql extends PDO {
     {            
         foreach($parameters as $key => $value) {
 
-            $this->setParam($key, $value);
+            $this->setParam($statement,$key,$value);
         }
 
     }
@@ -43,7 +43,7 @@ class Sql extends PDO {
 
 //Ex.: fazer um UPDATE:
 /*
-stmt = $conn->prepare("UPDATE tb_usuarios SET deslogin = :LOGIN, dessenha = :PASSWORD WHERE idusuario = :ID");
+$stmt = $conn->prepare("UPDATE tb_usuarios SET deslogin = :LOGIN, dessenha = :PASSWORD WHERE idusuario = :ID");
 
 $login = "maria";
 $password = "qwert";
