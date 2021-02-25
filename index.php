@@ -53,4 +53,12 @@ $usr->update("professor", "Rec@342");
 echo $usr;
 */
 
+//Deleta usuario
+
+$usr = new Usuario();
+$usr->loadById(8);
+$usr->delete();
+echo $usr;
+
+
 ?>
